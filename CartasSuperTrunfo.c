@@ -102,5 +102,42 @@ int main() {
     printf("Densidade Populacional: %.2f\n", densidade2);
     printf("PIB per Capita: %.2f\n", pibPerCapita2);
 
+    printf("\n===== BATALHA =====\n\n");
+
+// População
+if (populacao1 > populacao2)
+    printf("Populacao: Carta 1 venceu!\n");
+else if (populacao1 < populacao2)
+    printf("Populacao: Carta 2 venceu!\n");
+else
+    printf("Populacao: Empate!\n");
+
+// Densidade (MENOR vence)
+if (densidade1 < densidade2)
+    printf("Densidade: Carta 1 venceu!\n");
+else if (densidade1 > densidade2)
+    printf("Densidade: Carta 2 venceu!\n");
+else
+    printf("Densidade: Empate!\n");
+
+// PIB per capita
+if (pibPerCapita1 > pibPerCapita2)
+    printf("PIB per Capita: Carta 1 venceu!\n");
+else if (pibPerCapita1 < pibPerCapita2)
+    printf("PIB per Capita: Carta 2 venceu!\n");
+else
+    printf("PIB per Capita: Empate!\n");
+
+// Super Poder
+float super1 = populacao1 + area1 + pib1 + pontosturisticos1 + pibPerCapita1 - densidade1;
+float super2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibPerCapita2 - densidade2;
+
+if (super1 > super2)
+    printf("Super Poder: Carta 1 venceu a batalha!\n");
+else if (super1 < super2)
+    printf("Super Poder: Carta 2 venceu a batalha!\n");
+else
+    printf("Super Poder: Empate absoluto!\n");
+
     return 0;
 }
